@@ -9,7 +9,7 @@ const FlashcardList = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
-        axios.get('http://localhost:3000/flashcards')
+        axios.get('https://flashcard-backend-radl.onrender.com/flashcards')
             .then(res => setFlashcards(res.data))
             .catch(err => console.error(err));
     }, []);

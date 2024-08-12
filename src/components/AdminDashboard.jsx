@@ -13,7 +13,7 @@ const AdminDashboard = () => {
     const [editAnswer, setEditAnswer] = useState('');
 
     const fetchFlashcards = () => {
-        axios.get('http://localhost:3000/flashcards')
+        axios.get('https://flashcard-backend-radl.onrender.com/flashcards')
             .then(res => setFlashcards(res.data))
             .catch(err => console.error(err));
     };
@@ -27,7 +27,7 @@ const AdminDashboard = () => {
             alert('Both Question and Answer fields must be filled out.');
             return;
         }
-        axios.post('http://localhost:3000/flashcards', { question, answer })
+        axios.post('https://flashcard-backend-radl.onrender.com/flashcards', { question, answer })
             .then(() => {
                 setQuestion('');
                 setAnswer('');
@@ -38,7 +38,7 @@ const AdminDashboard = () => {
     };
 
     const deleteFlashcard = (id) => {
-        axios.delete(`http://localhost:3000/flashcards/${id}`)
+        axios.delete(`https://flashcard-backend-radl.onrender.com/flashcards/${id}`)
             .then(() => fetchFlashcards());
     };
 
@@ -49,7 +49,7 @@ const AdminDashboard = () => {
     };
 
     const updateFlashcard = () => {
-        axios.put(`http://localhost:3000/flashcards/${editingId}`, { question: editQuestion, answer: editAnswer })
+        axios.put(`https://flashcard-backend-radl.onrender.com/flashcards/${editingId}`, { question: editQuestion, answer: editAnswer })
             .then(() => {
                 setEditingId(null);
                 setEditQuestion('');
