@@ -1,0 +1,25 @@
+
+/* .flashcard {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.flashcard.flipped {
+  transform: rotateY(180deg);
+}
+
+button {
+  margin: 5px;
+}
+
+.mirrored-text {
+  transform: scaleX(-1); /* Flip the text horizontally */
+  /* display: inline-block; */
+/* } */ 
